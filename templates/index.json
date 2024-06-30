@@ -3,9 +3,9 @@
         "banner":{
             "type": "banner",
             "settings": {}
-        },
+        }
     },
-    "order":{
+    "order": [
         "banner"
-    }
+    ]
 }
