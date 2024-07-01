@@ -186,6 +186,26 @@
     "sections": {
       "announcement-bar": {
         "type": "announcement-bar",
+        "blocks": {
+          "links_q4E3ah": {
+            "type": "links",
+            "settings": {
+              "text": "Help",
+              "link": ""
+            }
+          },
+          "links_RmgHaE": {
+            "type": "links",
+            "settings": {
+              "text": "Account",
+              "link": ""
+            }
+          }
+        },
+        "block_order": [
+          "links_q4E3ah",
+          "links_RmgHaE"
+        ],
         "settings": {
           "show-announcement": true,
           "image": "shopify:\/\/shop_images\/top-logo.png",
