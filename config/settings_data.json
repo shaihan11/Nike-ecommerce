@@ -210,7 +210,7 @@
           "show-announcement": true,
           "image": "shopify:\/\/shop_images\/top-logo.png",
           "background": "#f4f4f4",
-          "text_color": "#252121"
+          "text_color": "#000000"
         }
       }
     },
