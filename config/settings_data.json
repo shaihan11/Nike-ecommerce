@@ -188,7 +188,9 @@
         "type": "announcement-bar",
         "settings": {
           "show-announcement": true,
-          "image": "shopify:\/\/shop_images\/top-logo.png"
+          "image": "shopify:\/\/shop_images\/top-logo.png",
+          "background": "#f4f4f4",
+          "text_color": "#252121"
         }
       }
     },
