@@ -25,6 +25,17 @@
     </section>
 {% endif %}
 
+
+<style>
+    .announcement-bar{
+        background: {{  section.settings.background }};
+    }
+    .acn-bar-right{
+        color: {{  section.settings.text_color }};
+    }
+</style>
+
+
 {% schema %}
 {
     "name": "Announcement Bar",
@@ -40,7 +51,22 @@
             "id": "image",
             "label": "Pick image",
             "info": "Png file"
+        },
+
+        {
+            "type": "color",
+            "id": "background",
+            "label": "Background",
+            "default": "#f4f4f4"
+        },
+        {
+            "type": "color",
+            "id": "text_color",
+            "label": "Text",
+            "default": "#000000"
         }
+
+
     ],
     "presets": []
 }
