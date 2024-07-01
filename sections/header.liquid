@@ -1,6 +1,53 @@
 <section>
     <div class="base-container">
-        {% render 'header-nav' with section as mysection %}
+        <header class="header-nav">
+            <div class="header-logo">
+                <a href="/">
+                    {% if mysection.settings.logo_image != blank %}
+                        <img
+                            width="40"
+                            height="40"
+                            loading="lazy"
+                            src="{{ mysection.settings.logo_image | image_url }}" 
+                            alt="logo top"/>
+                    {% else %}
+                        <img 
+                            width="80"
+                            height="50"
+                            loading="lazy"
+                            src="{{ 'nike-logo.png' | asset_url }}" 
+                            alt="nike-logo"/>
+                    {% endif %}
+                </a>
+            </div>
+            {% render 'header-nav' with section as mysection %}
+
+            <div class="nav-menu">
+                <nav>
+                    <ul>
+                        {% for link in linklists['main-menu'].links %}
+                            <li>
+                                <a href="{{ link.url }}">{{ link.title }}</a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </nav>
+            </div>
+        
+            <div class="header-right">
+                <!-- Additional header content -->
+            </div>
+        </header>
+        
+        --{{ mysection.id }}
+        
+        <style>
+            .nav-menu ul li a {
+                color: {{ mysection.settings.text_color }};
+            }
+        </style>
+        
+        
     </div>
 </section>
 
