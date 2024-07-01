@@ -3,12 +3,12 @@
         <header class="header-nav">
             <div class="header-logo">
                 <a href="/">
-                    {% if mysection.settings.logo_image != blank %}
+                    {% if section.settings.logo_image != blank %}
                         <img
                             width="40"
                             height="40"
                             loading="lazy"
-                            src="{{ mysection.settings.logo_image | image_url }}" 
+                            src="{{ section.settings.logo_image | image_url }}" 
                             alt="logo top"/>
                     {% else %}
                         <img 
@@ -20,7 +20,6 @@
                     {% endif %}
                 </a>
             </div>
-            {% render 'header-nav' with section as mysection %}
 
             <div class="nav-menu">
                 <nav>
@@ -43,7 +42,7 @@
         
         <style>
             .nav-menu ul li a {
-                color: {{ mysection.settings.text_color }};
+                color: {{ section.settings.text_color }};
             }
         </style>
         
