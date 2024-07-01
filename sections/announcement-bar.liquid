@@ -1,7 +1,28 @@
 {% if section.settings ['show-announcement'] %}
-
-    <section>accouncement bar</section>
-
+    <section>
+        <div class="accouncement-bar">
+            <div class="acn-bar-left">
+                {% if section.settings.image != blank %}
+                    <img
+                        width="40"
+                        height="40"
+                        loading="lazy"
+                        src="{{ section.settings.image | image_url }}" 
+                        alt="logo top"/>
+                {%  else %}
+                    <img
+                        width="40"
+                        height="40"
+                        loading="lazy"
+                        src="{{ 'top-logo.png' | image_url }}" 
+                        alt="logo top"/>
+                {%  endif %}
+            </div>
+            <div class="acn-bar-right">
+    
+            </div>
+        </div>
+    </section>
 {% endif %}
 
 
@@ -15,6 +36,13 @@
             "id": "show-announcement",
             "label": "Show Announcement",
             "default": true
+        },
+
+        {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Pick image",
+            "info": "Png file"
         }
     ],
     "presets": [
