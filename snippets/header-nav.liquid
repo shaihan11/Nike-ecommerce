@@ -1,17 +1,26 @@
 <header class="header-nav">
     <div class="header-logo">
         <a href="/">
-            
             <img 
                 width="80"
                 height="50"
                 loading="lazy"
-                src="{{ 'nike-logo.png' | asset_url }}" alt="nike-logo"/>
+                src="{{ 'nike-logo.png' | asset_url }}" 
+                alt="nike-logo"/>
         </a>
     </div>
 
     <div class="nav-menu">
-        <!-- Menu items will go here -->
+        <nav>
+            <ul>
+                {% assign main_menu_handle = 'main-menu' %}
+                {% for link in linklists[main_menu_handle].links %}
+                    <li>
+                        <a href="{{ link.url }}">{{ link.title }}</a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </nav>
     </div>
 
     <div class="header-right">
