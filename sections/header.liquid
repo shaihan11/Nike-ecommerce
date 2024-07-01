@@ -1,15 +1,27 @@
 <section>
     <div class="base-container">
-        {% render 'header-nav' %}
+        {% render 'header-nav' with section as mysection %}
     </div>
 </section>
 
 {% schema %}
 {
     "name": "Navbar",
-    "settings": [],
-    "presets": [
-
+    "settings": [
+        {
+            "type": "image_picker",
+            "id": "logo_image",
+            "label": "Pick image",
+            "info": "Png file"
+        },
+        {
+            "type": "color",
+            "id": "text_color",
+            "label": "Text Color",
+            "default": "#000000"
+        }
     ]
 }
 {% endschema %}
+
+

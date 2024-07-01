@@ -1,12 +1,12 @@
 <header class="header-nav">
     <div class="header-logo">
         <a href="/">
-            {% if section.settings.logo_image != blank %}
+            {% if mysection.settings.logo_image != blank %}
                 <img
                     width="40"
                     height="40"
                     loading="lazy"
-                    src="{{ section.settings.logo_image | image_url }}" 
+                    src="{{ mysection.settings.logo_image | image_url }}" 
                     alt="logo top"/>
             {% else %}
                 <img 
@@ -36,28 +36,11 @@
     </div>
 </header>
 
+--{{ mysection.id }}
+
 <style>
     .nav-menu ul li a {
-        color: {{ section.settings.text_color }};
+        color: {{ mysection.settings.text_color }};
     }
 </style>
 
-{% schema %}
-{
-    "name": "Header Style",
-    "settings": [
-        {
-            "type": "image_picker",
-            "id": "logo_image",
-            "label": "Pick image",
-            "info": "Png file"
-        },
-        {
-            "type": "color",
-            "id": "text_color",
-            "label": "Text Color",
-            "default": "#000000"
-        }
-    ]
-}
-{% endschema %}
