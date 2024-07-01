@@ -1,25 +1,27 @@
 {% if section.settings['show-announcement'] %}
-    <section>
-        <div class="announcement-bar base-container">
-            <div class="acn-bar-left">
-                {% if section.settings.image != blank %}
-                    <img
-                        width="40"
-                        height="40"
-                        loading="lazy"
-                        src="{{ section.settings.image | image_url }}" 
-                        alt="logo top"/>
-                {% else %}
-                    <img
-                        width="40"
-                        height="40"
-                        loading="lazy"
-                        src="{{ 'top-logo.png' | asset_url  }}" 
-                        alt="logo top"/>
-                {% endif %}
-            </div>
-            <div class="acn-bar-right">
-                right
+    <section class="announcement-bar">
+        <div class="base-container">
+            <div class="top-bar-wrapper">
+                <div class="acn-bar-left">
+                    {% if section.settings.image != blank %}
+                        <img
+                            width="40"
+                            height="40"
+                            loading="lazy"
+                            src="{{ section.settings.image | image_url }}" 
+                            alt="logo top"/>
+                    {% else %}
+                        <img
+                            width="40"
+                            height="40"
+                            loading="lazy"
+                            src="{{ 'top-logo.png' | asset_url  }}" 
+                            alt="logo top"/>
+                    {% endif %}
+                </div>
+                <div class="acn-bar-right">
+                    right
+                </div>
             </div>
         </div>
     </section>
