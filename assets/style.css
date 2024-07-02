@@ -46,11 +46,18 @@ a{
 .header-right{
     display: flex;
     align-items: center;
+    gap: 10px;
 }
-
+.header-right form{
+    position: relative;
+}
+.header-right form i{
+    position: absolute;
+    right: 14px;
+    top: 10px;
+}
 .search-nav {
     padding: 10px;
-    margin-top: 10px;
     border-radius: 15px;
     border: none;
     background-color: rgb(239, 234, 234);
