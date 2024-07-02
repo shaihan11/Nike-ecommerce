@@ -21,24 +21,13 @@
                 </a>
             </div>
 
-            <div class="nav-menu">
-                <nav>
-                    <ul>
-                        {% for link in linklists['main-menu'].links %}
-                            <li>
-                                <a href="{{ link.url }}">{{ link.title }}</a>
-                            </li>
-                        {% endfor %}
-                    </ul>
-                </nav>
-            </div>
+            {% render 'header-nav' %}
         
             <div class="header-right">
                 <!-- Additional header content -->
             </div>
         </header>
         
-        --{{ mysection.id }}
         
         <style>
             .nav-menu ul li a {
