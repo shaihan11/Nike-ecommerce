@@ -12,13 +12,14 @@
     "banner": {
       "type": "banner",
       "settings": {
-        "background": "#F4F4F4",
+        "background": "#f4f4f4",
         "text_color": "#000000"
       }
     },
     "three_images_nigQBe": {
       "type": "three-images",
       "settings": {
+        "image2": "shopify:\/\/shop_images\/two.png"
       }
     }
   },
