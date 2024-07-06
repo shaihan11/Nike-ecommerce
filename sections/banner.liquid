@@ -1,43 +1,30 @@
 <section>
     <div class="banner-wrapper">
-        {% if section.settings.logo_image != blank %}
-            <img
-                width="100%"
-                height="100%"
-                loading="lazy"
-                src="{{ section.settings.background_img | image_url }}" 
-                alt="nike banner"/>
-        {% else %}
-            <img 
-                width="100%"
-                height="100%"
-                loading="lazy"
-                src="{{ 'banner-img.png' | asset_url }}" 
-                alt="nike banner"/>
-        {% endif %}
-        
-        <div class="banner-txt">
-            <div class="slide-text" id="text1"><p>Members: Free Shipping!</p></div>
-            <div class="slide-text" id="text2">Save Up to 40%</div>
-            <div class="slide-text" id="text3">Get Your Gear Faster</div></div>
-        </div>
+      <div class="slide-text" id="text1"><p>Members: Free Shipping!</p></div>
+      <div class="slide-text" id="text2">Save Up to 40%</div>
+      <div class="slide-text" id="text3">Get Your Gear Faster</div>
+    </div>
   </section>
   
   <style>
     .banner-wrapper {
-        height: 100vh;
-        color: {{ section.settings.text_color }};
-      }
+      padding: 30px;
+      background: {{ section.settings.background }}
+      ;
+      color: {{ section.settings.text_color }}
+      ;
+  
+    }
   
     .slide-text {
       position: absolute;
       top: 155px;
-      left: -150%; /* Initially position the divs outside the left edge of the screen */
+      left: -150%;
       transform: translate(0, -50%);
       color: black;
       padding: 20px;
       font-size: 20px;
-      transition: left 0.5s ease-in-out; /* Add a smooth transition effect */
+      transition: left 0.5s ease-in-out;
     }
   </style>
   
@@ -81,10 +68,10 @@
     "name": "Banner",
     "settings": [
       {
-        "type": "image_picker",
-        "id": "background_img",
-        "label": "Pick background image",
-        "info": "Png file"
+        "type": "color",
+        "id": "background",
+        "label": "Background",
+        "default": "#F4F4F4"
       },
       {
         "type": "color",
