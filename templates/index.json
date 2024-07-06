@@ -19,8 +19,7 @@
     "three_images_nigQBe": {
       "type": "three-images",
       "settings": {
-        "image2": "shopify:\/\/shop_images\/two.png",
-        "image3": "shopify:\/\/shop_images\/two.png"
+        "image2": "shopify:\/\/shop_images\/two.png"
       }
     }
   },
