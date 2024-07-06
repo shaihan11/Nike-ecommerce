@@ -1,15 +1,31 @@
 <section>
     <div class="banner-wrapper">
-      <div class="slide-text" id="text1"><p>Members: Free Shipping!</p></div>
-      <div class="slide-text" id="text2">Save Up to 40%</div>
-      <div class="slide-text" id="text3">Get Your Gear Faster</div>
-    </div>
+        {% if section.settings.logo_image != blank %}
+            <img
+                width="100%"
+                height="100%"
+                loading="lazy"
+                src="{{ section.settings.background_img | image_url }}" 
+                alt="nike banner"/>
+        {% else %}
+            <img 
+                width="100%"
+                height="100%"
+                loading="lazy"
+                src="{{ 'banner-img.png' | asset_url }}" 
+                alt="nike banner"/>
+        {% endif %}
+        
+        <div class="banner-txt">
+            <div class="slide-text" id="text1"><p>Members: Free Shipping!</p></div>
+            <div class="slide-text" id="text2">Save Up to 40%</div>
+            <div class="slide-text" id="text3">Get Your Gear Faster</div></div>
+        </div>
   </section>
   
   <style>
     .banner-wrapper {
         height: 100vh;
-        background-image: url('{{ section.settings.background_img }}');
         color: {{ section.settings.text_color }};
       }
   
