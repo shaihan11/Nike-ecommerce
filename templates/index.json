@@ -12,12 +12,18 @@
     "banner": {
       "type": "banner",
       "settings": {
-        "background_img": "shopify:\/\/shop_images\/banner.img.png",
+        "background": "#F4F4F4",
         "text_color": "#000000"
+      }
+    },
+    "three_images_nigQBe": {
+      "type": "three-images",
+      "settings": {
       }
     }
   },
   "order": [
-    "banner"
+    "banner",
+    "three_images_nigQBe"
   ]
 }
