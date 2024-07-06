@@ -9,11 +9,10 @@
   <style>
     .banner-wrapper {
       padding: 30px;
-      background: {{ section.settings.background }}
-      ;
-      color: {{ section.settings.text_color }}
-      ;
-  
+      background: {{ section.settings.background_img }};
+      color: {{ section.settings.text_color }};
+        
+
     }
   
     .slide-text {
@@ -68,8 +67,8 @@
     "name": "Banner",
     "settings": [
       {
-        "type": "color",
-        "id": "background",
+        "type": "image_picker",
+        "id": "background_img",
         "label": "Background",
         "default": "#F4F4F4"
       },
