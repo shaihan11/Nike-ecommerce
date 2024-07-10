@@ -2,20 +2,30 @@
   "sections": {
     "banner": {
       "type": "banner",
-      "settings": {
-        "background": "#f4f4f4",
-        "text_color": "#000000"
-      }
+      "settings": {}
     },
-    "three_images_nigQBe": {
+    "three-images": {
       "type": "three-images",
-      "settings": {
-        "image2": "shopify:\/\/shop_images\/two.png"
-      }
+      "settings": {}
+    },
+    "more-info": {
+      "type": "more-info",
+      "settings": {}
+    },
+    "all-collections": {
+      "type": "all-collections",
+      "settings": {}
+    },
+    "all-products": {
+      "type": "all-products",
+      "settings": {}
     }
   },
   "order": [
     "banner",
-    "three_images_nigQBe"
+    "three-images",
+    "more-info",
+    "all-collections",
+    "all-products"
   ]
 }
