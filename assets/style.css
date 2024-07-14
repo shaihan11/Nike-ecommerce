@@ -23,7 +23,6 @@ a{
     justify-content: space-between;
     align-items: center;
 }
-
 .acn-bar-right ul{
     display: flex;
     align-items: center;
@@ -38,13 +37,11 @@ a{
     padding-top: 10px;
     padding-bottom: 10px;
 }
-
 .nav-menu ul {
     display: flex;
     align-items: center;
     gap: 15px;
 }
-
 .header-right{
     display: flex;
     align-items: center;
